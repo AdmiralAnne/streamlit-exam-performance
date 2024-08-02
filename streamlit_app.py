@@ -60,7 +60,7 @@ st.header('Input Features')
 # create a slider for the features
 study_hours = st.slider("Select study_hour", min_value=0.0, max_value=24.0, value=5.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
 prev_score = st.slider("Select prev_score", min_value=0.0, max_value=100.0, value=50.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
-input_data = {"study_hours": study_hours, "prev_score": prev_score}
+input_data = {"Study Hours": study_hours, "Previous Exam Score": prev_score}
 # new dataframe
 input_df = pd.DataFrame(input_data, index=[0])  # Create a single-row DataFrame
 
