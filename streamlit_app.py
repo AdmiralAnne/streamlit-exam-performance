@@ -92,4 +92,4 @@ st.dataframe(predict_propability,
                ),
              }, hide_index=True)
 
-st.progress(df['0'][0], text="progress_text")
+st.progress(predict_propability['0'][0], text="progress_text")
