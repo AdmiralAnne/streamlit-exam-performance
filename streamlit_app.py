@@ -73,3 +73,21 @@ predict_propability
 
 st.header('Predictions')
 st.success(f"Predicted Class: {predict[0]}")
+
+st.dataframe(predict_propability,
+             column_config={
+               'Pass': st.column_config.ProgressColumn(
+                 '0',
+                 format='%f',
+                 width='medium',
+                 min_value=0.0,
+                 max_value=1.0
+               ),
+               'Fail': st.column_config.ProgressColumn(
+                 '1',
+                 format='%f',
+                 width='medium',
+                 min_value=0.0,
+                 max_value=1.0
+               ),
+             }, hide_index=True)
