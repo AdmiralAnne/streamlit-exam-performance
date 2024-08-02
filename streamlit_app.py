@@ -75,5 +75,5 @@ st.header('Predictions')
 st.success(f"Predicted Class: {predict[0]}")
 
 st.progress(predict_propability[0][0], text="Fail Probability")
-st.progress(predict_propability[1][1], text="Pass Probability")
+st.progress(predict_propability[0][1], text="Pass Probability")
 
