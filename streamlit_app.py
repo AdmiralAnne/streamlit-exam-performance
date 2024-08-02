@@ -76,9 +76,9 @@ st.success(f"Predicted Class: {predict[0]}")
 
 col3, col4= st.columns(2)
     # print data for passing and failing students separatly
-    with col3:
-        st.text("Pass Probability")
-        st.progress(predict_propability[0][0], text="Fail Probability")
-    with col4:
-        st.text("Fail Probability")
-        st.progress(predict_propability[0][1], text="Pass Probability")
+with col3:
+    st.text("Pass Probability")
+    st.progress(predict_propability[0][0], text="Fail Probability")
+with col4:
+    st.text("Fail Probability")
+    st.progress(predict_propability[0][1], text="Pass Probability")
