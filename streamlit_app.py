@@ -91,3 +91,5 @@ st.dataframe(predict_propability,
                  max_value=1.0
                ),
              }, hide_index=True)
+
+st.progress(predict_propability[0], text=progress_text)
