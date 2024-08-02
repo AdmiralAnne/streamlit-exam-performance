@@ -55,3 +55,9 @@ with st.expander("**Key Insights**", expanded=False):
     st.divider()
     st.info('the minimum no. of Marks needed to Score in prev test to Pass:')
     st.success(min_marks)
+
+clf = RandomForestClassifier()
+clf.fit(X,y)
+predict = clf.predict(X) # returns predicted class labels
+predict_propability = clf.predict_proba(X)
+predict_propability
