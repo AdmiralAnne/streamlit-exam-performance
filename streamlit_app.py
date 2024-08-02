@@ -58,13 +58,18 @@ with st.expander("**Key Insights**", expanded=False):
 
 st.header('Input Features')
 # create a slider for the features
-bill_length_mm = st.slider("Select bill_Length", min_value=30.0, max_value=60.0, value=45.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
-bill_depth_mm = st.slider("Select bill_depth", min_value=13.0, max_value=25.0, value=18.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
-flipper_length_mm = st.slider("Select flipper_length", min_value=172.0, max_value=231.0, value=200.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
-body_mass_g = st.slider("Select body_mass", min_value=2700.0, max_value=6200.0, value=4200.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+study_hours = st.slider("Select study_hour", min_value=0.0, max_value=24.0, value=5.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+prev_score = st.slider("Select prev_score", min_value=0.0, max_value=100.0, value=50.0, step=1.0, format=None, key=None, help=None, on_change=None, args=None, kwargs=None, disabled=False, label_visibility="visible")
+input_data = {"study_hours": study_hours, "prev_score": prev_score}
+# new dataframe
+input_df = pd.DataFrame(input_data, index=[0])  # Create a single-row DataFrame
 
 clf = RandomForestClassifier()
 clf.fit(X,y)
-predict = clf.predict(X) # returns predicted class labels
-predict_propability = clf.predict_proba(X)
-predict_propability
+
+predict = clf.predict(input_df) # returns predicted class labels
+predict_propability = clf.predict_proba(input_df)
+
+st.header('Predictions')
+st.write(f"Predicted Class: {predict[0]}")
+st.write(f"Predicted Probability: {predict_proba[0]}")
