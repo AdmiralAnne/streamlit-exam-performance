@@ -1,25 +1,31 @@
-# 📦 Streamlit App Starter Kit 
+# 📈 Exam Performance Prediction App 🎓
+
+[Streamlit](https://marji-exam-perfo.streamlit.app)
+
+**Description**
+
+This somewhat functional app helps you predict your exam results (pass or fail) based on your study hours and previous exam score.
+
+**Key Features:**
+
+* **🖥️ Simple Interface:** Easily input your study hours and previous score using sliders.
+* **📊 Data Exploration:** Explore the underlying dataset and visualize the relationship between study habits and exam results.
+* **🔮 Prediction & Insights:** Get a predicted class ("Pass" or "Fail") along with estimated probabilities for both outcomes.
+
+If you'd like to run this app locally, ensure you have the following libraries installed:
+
+```bash
+pip install streamlit pandas scikit-learn
 ```
-⬆️ (Replace above with your app's name)
-```
 
-Description of the app ...
+## Here's an example of how to use the app:
 
-## Demo App
+- Enter your study hours (e.g., 10 hours).
+- Enter your previous exam score (e.g., 80%).
+- Observe the predictions.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+If you'd like to contribute to this app, please feel free to open a pull request! 🚀
 
-## GitHub Codespaces
+##License
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
-
-## Section Heading
-
-This is filler text, please replace this with text for this section.
-
-## Further Reading
-
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+This app is licensed under the Do whatever you want License. ✨
