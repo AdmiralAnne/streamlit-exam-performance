@@ -69,7 +69,6 @@ clf.fit(X,y)
 
 predict = clf.predict(input_df) # returns predicted class labels
 predict_propability = clf.predict_proba(input_df)
-predict_propability
 
 # Class label mapping (assuming 0 is Fail and 1 is Pass)
 class_labels = {0: "Fail", 1: "Pass"}
