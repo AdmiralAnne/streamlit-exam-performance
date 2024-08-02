@@ -71,5 +71,4 @@ predict = clf.predict(input_df) # returns predicted class labels
 predict_propability = clf.predict_proba(input_df)
 
 st.header('Predictions')
-st.write(f"Predicted Class: {predict[0]}")
-st.write(f"Predicted Probability: {predict_proba[0]}")
+st.success(f"Predicted Class: {predict[0]}")
