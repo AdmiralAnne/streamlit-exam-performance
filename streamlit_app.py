@@ -69,6 +69,7 @@ clf.fit(X,y)
 
 predict = clf.predict(input_df) # returns predicted class labels
 predict_propability = clf.predict_proba(input_df)
+predict_propability
 
 st.header('Predictions')
 st.success(f"Predicted Class: {predict[0]}")
