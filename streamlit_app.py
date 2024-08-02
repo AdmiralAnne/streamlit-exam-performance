@@ -71,8 +71,13 @@ predict = clf.predict(input_df) # returns predicted class labels
 predict_propability = clf.predict_proba(input_df)
 predict_propability
 
+# Class label mapping (assuming 0 is Fail and 1 is Pass)
+class_labels = {0: "Fail", 1: "Pass"}
+
 st.header('Predictions')
-st.success(f"Predicted Class: {predict[0]}")
+
+predicted_class = class_labels[predict[0]]
+st.success(f"Predicted Class: {predicted_class}")
 
 col3, col4= st.columns(2)
     # print data for passing and failing students separatly
