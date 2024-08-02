@@ -92,4 +92,4 @@ st.dataframe(predict_propability,
                ),
              }, hide_index=True)
 
-st.progress(50], text="progress_text")
+st.progress(50, text="progress_text")
